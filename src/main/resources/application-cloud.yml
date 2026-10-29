@@ -1,0 +1,8 @@
+# Conexiones ociosas liberadas para una base de datos con suspensión automática.
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+      minimum-idle: 0
+      idle-timeout: 30000
+      connection-timeout: 30000

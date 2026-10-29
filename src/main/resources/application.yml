@@ -1,0 +1,39 @@
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+    include-stacktrace: never
+spring:
+  application:
+    name: supply-demo
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/supply}
+    username: ${DB_USER:supply}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+      probes:
+        enabled: true
+app:
+  admin-token: ${ADMIN_TOKEN}
+  cors-origin: ${CORS_ORIGIN:http://localhost:3000}
+springdoc:
+  swagger-ui:
+    persist-authorization: false
