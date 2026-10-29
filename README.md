@@ -2,6 +2,16 @@
 
 API REST independiente del portfolio de Daniel Rodríguez. Implementación nueva y demostrativa inspirada en el problema de seleccionar proveedores. **Todos los productos, proveedores, precios y stocks son ficticios. No se incluye código ni información de empleadores.**
 
+
+## Demo pública
+
+- [Swagger interactivo](https://supply-demo-api.onrender.com/swagger-ui/index.html)
+- [Consulta de ejemplo: DEMO-001, Madrid, 10 unidades](https://supply-demo-api.onrender.com/api/v1/recommendations?sku=DEMO-001&region=MADRID&quantity=10&strategy=CHEAPEST)
+
+API alojada en Render Free y PostgreSQL en Neon. Las consultas son públicas; la administración requiere un token privado. El servicio puede tardar unos minutos en arrancar tras inactividad. No es una garantía de disponibilidad continua.
+
+La CI ha superado 25 pruebas unitarias/integración con H2 y 17 pruebas contra PostgreSQL real. El despliegue también se ha verificado consultando salud, OpenAPI, las dos estrategias y el rechazo de acceso administrativo sin token.
+
 ## Stack utilizado
 
 - Java 17, Spring Boot 3.5, Spring MVC, Bean Validation y DTOs con records.
