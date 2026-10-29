@@ -21,7 +21,7 @@ La CI ha superado 25 pruebas unitarias/integración con H2 y 17 pruebas contra P
 - Control de concurrencia con `@Version` y conflictos HTTP 409.
 - OpenAPI/Swagger, pruebas unitarias e integración, Docker y pipeline de CI.
 
-La web CV no cambia: este repositorio contiene solo el backend. No es una réplica del sistema profesional original. No incorpora Arrow ni Kafka: el catálogo reducido no justifica esa complejidad.
+La web CV no cambia: este repositorio contiene solo el backend.
 
 ## Arranque rápido con Docker Desktop
 
@@ -165,11 +165,3 @@ Controller → Service (`@Transactional`) → Repository → PostgreSQL.
 La política pura `SelectionPolicy` permite probar las reglas sin arrancar Spring. `Clock` permite verificar fechas sin depender del día de ejecución. JPA usa `open-in-view=false`; las entidades no se exponen como respuestas HTTP.
 
 Más detalles en [docs/DECISIONES.md](docs/DECISIONES.md). Despliegue separado y conexión al portfolio en [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md).
-
-## Alcance y honestidad del portfolio
-
-Este es un proyecto de demostración construido con asistencia de IA. Antes de presentarlo como evidencia de tus conocimientos, ejecútalo, revisa las decisiones, modifica reglas y entiende sus pruebas. No lo describas como experiencia en producción. El objetivo es que puedas explicar y defender cada parte.
-
-## Demo pública: preparación
-
-Se incluye render.yaml para desplegar la API en el plan Free de Render y conectarla a PostgreSQL de Neon. Consulta docs/DESPLIEGUE.md. Este archivo no despliega por sí solo: requiere un repositorio y las cuentas de alojamiento.
