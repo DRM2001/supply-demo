@@ -2,7 +2,7 @@
 
 API REST independiente del portfolio de Daniel Rodríguez. Implementación nueva y demostrativa inspirada en el problema de seleccionar proveedores. **Todos los productos, proveedores, precios y stocks son ficticios. No se incluye código ni información de empleadores.**
 
-## Qué demuestra
+## Stack utilizado
 
 - Java 17, Spring Boot 3.5, Spring MVC, Bean Validation y DTOs con records.
 - PostgreSQL, Spring Data JPA, migraciones Flyway y restricciones en base de datos.
